@@ -1,20 +1,20 @@
-from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
-from sqlalchemy.orm import sessionmaker
-import os
-from dotenv import load_dotenv
+# from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
+# from sqlalchemy.orm import sessionmaker
+# import os
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 
-DB_URL = "postgresql+asyncpg://neondb_owner:npg_LSsi8wP1cUmA@ep-bitter-cloud-a1mre7ly-pooler.ap-southeast-1.aws.neon.tech/neondb"
-# DB_URL =  os.getenv("DATABASE_URL")
+# DB_URL = "postgresql+asyncpg://neondb_owner:npg_LSsi8wP1cUmA@ep-bitter-cloud-a1mre7ly-pooler.ap-southeast-1.aws.neon.tech/neondb"
+# # DB_URL =  os.getenv("DATABASE_URL")
 
-# Tạo engine kết nối database
-engine = create_async_engine(DB_URL, echo=True, future=True)
+# # Tạo engine kết nối database
+# engine = create_async_engine(DB_URL, echo=True, future=True)
 
-# Tạo session factory
-AsyncSessionLocal = sessionmaker(engine, expire_on_commit=False, class_=AsyncSession)
+# # Tạo session factory
+# AsyncSessionLocal = sessionmaker(engine, expire_on_commit=False, class_=AsyncSession)
 
-# Hàm để lấy session trong route của FastAPI
-async def get_db():
-    async with AsyncSessionLocal() as session:
-        yield session
+# # Hàm để lấy session trong route của FastAPI
+# async def get_db():
+#     async with AsyncSessionLocal() as session:
+#         yield session
