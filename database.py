@@ -5,7 +5,6 @@
 
 # load_dotenv()
 
-# DB_URL = "postgresql+asyncpg://neondb_owner:npg_LSsi8wP1cUmA@ep-bitter-cloud-a1mre7ly-pooler.ap-southeast-1.aws.neon.tech/neondb"
 # # DB_URL =  os.getenv("DATABASE_URL")
 
 # # Tạo engine kết nối database
